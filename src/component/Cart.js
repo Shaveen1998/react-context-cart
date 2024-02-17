@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import SingleProduct from './SingleProduct'
 import "../public/styles.css";
 import { CartState } from '../context/cartContext';
+import { Cart } from '../context/cartContext';
 
-function Cart() {
-    const { cart } = CartState();
+function CartComponent() {
+    const { cart } = useContext(Cart)
 
     console.log(cart)
   return (
@@ -21,4 +22,4 @@ function Cart() {
   )
 }
 
-export default Cart
+export default CartComponent

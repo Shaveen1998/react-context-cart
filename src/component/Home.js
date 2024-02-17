@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import SingleProduct from './SingleProduct'
 import "../public/styles.css";
 import { CartState } from '../context/cartContext';
+import { Cart } from '../context/cartContext';
 
 function Home() {
 
-    const { products, setProducts } = CartState();
+    const { products, setProducts } = useContext(Cart);
 
     useEffect(()=>{
         const fetchProducts = async ()=>{

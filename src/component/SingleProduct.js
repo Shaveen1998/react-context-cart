@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "../public/styles.css";
 import { CartState } from '../context/cartContext';
+import { Cart } from '../context/cartContext';
 
 function SingleProduct({prod}) {
 
-    const { cart, setCart } = CartState();
+    const { cart, setCart } = useContext(Cart);
 
   return (
     <div>
